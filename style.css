@@ -1,0 +1,380 @@
+:root {
+    /* Type colors */
+    --normal: #A8A878;
+    --fire: #F08030;
+    --water: #6890F0;
+    --electric: #F8D030;
+    --grass: #78C850;
+    --ice: #98D8D8;
+    --fighting: #C03028;
+    --poison: #A040A0;
+    --ground: #E0C068;
+    --flying: #A890F0;
+    --psychic: #F85888;
+    --bug: #A8B820;
+    --rock: #B8A038;
+    --ghost: #705898;
+    --dragon: #7038F8;
+    --dark: #705848;
+    --steel: #B8B8D0;
+    --fairy: #EE99AC;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1542779283-429940ce8336?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center;
+    background-size: cover;
+    filter: brightness(0.4);
+    z-index: -1;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    border: 2px solid #ffcc00;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffcc00;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    text-shadow: 3px 3px 0 #3b4cca, 5px 5px 0 #2a35a0;
+}
+
+.type-selector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.type-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.type-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.team-selector {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.team-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 15px;
+    background-color: #3b4cca;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.team-btn:hover {
+    background-color: #2a35a0;
+    transform: scale(1.05);
+}
+
+.team-display {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    border: 2px solid #ffcc00;
+}
+
+.team-title {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.pokemon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.pokemon-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.pokemon-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.pokemon-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.pokemon-item {
+    font-size: 0.9rem;
+    margin-bottom: 3px;
+    text-align: left;
+}
+
+.pokemon-moves {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.move {
+    display: block;
+    white-space: normal;
+    padding: 4px 6px;
+    margin: 4px 0;
+    background-color: #eee;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .pokemon-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .pokemon-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .pokemon-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .type-btn {
+        font-size: 0.6rem;
+        padding: 8px 12px;
+    }
+}
+/* ... (giữ nguyên phần cũ) */
+
+/* Boss Teams Style */
+.mode-switcher {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mode-btn {
+  padding: 10px 20px;
+  background-color: #3b4cca;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.7rem;
+}
+
+.mode-btn.active {
+  background-color: #ffcc00;
+  color: #2a35a0;
+}
+
+.boss-accordion {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid #ffcc00;
+}
+
+.boss-header {
+  background-color: #3b4cca;
+  color: #fff;
+  padding: 15px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+
+.boss-panel {
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: #333;
+}
+
+.boss-team {
+  margin: 10px 0;
+}
+
+.boss-pokemon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px 0;
+}
+
+.boss-pokemon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+/* Boss Teams - Giống với Standard Teams */
+.bosses-content {
+  background-color: rgba(0, 0, 0, 0.6); /* nền đen mờ dịu hơn */
+  border: 2px solid #3b4cca;
+  border-radius: 10px;
+  padding: 20px;
+  color: #eee;
+}
+
+.boss-type-header {
+  font-family: 'Press Start 2P', cursive;
+  color: #ffcc00;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.boss-team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.boss-panel, .boss-team {
+  background-color: rgba(255, 255, 255, 0.08); /* sáng nhẹ thôi */
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.boss-team-title {
+  color: #ffcc00;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.boss-pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 15px;
+}
+
+.boss-pokemon-card {
+  text-align: center;
+}
+
+.boss-pokemon-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  padding: 5px;
+  margin: 0 auto;
+}
+
+.boss-pokemon-name {
+  color: #fff;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+#boss-teams {
+  display: none; /* Ẩn ban đầu */
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 0.7em;
+  background: #333;
+  color: white;
+  margin-top: 5px;
+}
+
+.type-badge.mega {
+  background: var(--dragon);
+}
+
+/* Hiệu ứng lazy load */
+img[data-src] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img.loaded {
+  opacity: 1;
+}

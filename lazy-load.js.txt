@@ -1,0 +1,82 @@
+// lazy-load.js
+class PokemonLazyLoader {
+  constructor() {
+    this.observer = null;
+    this.initObserver();
+  }
+
+  initObserver() {
+    // Cấu hình Observer
+    const options = {
+      rootMargin: '200px 0px', // Load trước khi vào viewport 200px
+      threshold: 0.01
+    };
+
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          this.loadImage(entry.target);
+        }
+      });
+    }, options);
+  }
+
+  loadImage(imgElement) {
+    // Chỉ load nếu có data-src
+    if (!imgElement.dataset.src) return;
+
+    const realSrc = imgElement.dataset.src;
+    
+    // Tạo ảnh tạm để test load
+    const tempImg = new Image();
+    tempImg.src = realSrc;
+    
+    tempImg.onload = () => {
+      // Khi ảnh thật load xong
+      imgElement.src = realSrc;
+      imgElement.classList.add('loaded');
+      this.observer.unobserve(imgElement);
+      
+      // Hiệu ứng mờ dần
+      imgElement.style.transition = 'opacity 0.5s';
+      imgElement.style.opacity = 1;
+    };
+
+    tempImg.onerror = () => {
+      // Fallback nếu ảnh lỗi
+      imgElement.src = 'https://via.placeholder.com/100?text=Pokemon';
+      imgElement.classList.add('error');
+    };
+  }
+
+  observeElements(selector) {
+    document.querySelectorAll(selector).forEach(img => {
+      // Thêm placeholder
+      if (!img.src) {
+        img.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHJlY3Qgd2lkdGg9IjEwMCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiNlZWVlZWUiLz48L3N2Zz4=';
+      }
+      this.observer.observe(img);
+    });
+  }
+}
+
+// Khởi tạo khi DOM ready
+document.addEventListener('DOMContentLoaded', () => {
+  window.pokemonLazyLoader = new PokemonLazyLoader();
+  
+  // Áp dụng cho cả standard và boss teams
+  pokemonLazyLoader.observeElements('.pokemon-image');
+  pokemonLazyLoader.observeElements('.boss-pokemon-img');
+  
+  // Preload 2 ảnh đầu tiên
+  const preloadImages = [
+    document.querySelector('.pokemon-image'),
+    document.querySelector('.boss-pokemon-img')
+  ].filter(Boolean);
+  
+  preloadImages.forEach(img => {
+    if (img.dataset.src) {
+      img.src = img.dataset.src;
+    }
+  });
+});

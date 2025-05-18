@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Team Viewer + Bosses</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background"></div>
+  <div class="container">
+    <header>
+      <h1>Z Move Team</h1>
+      <div class="mode-switcher">
+        <button class="mode-btn active" data-mode="teams">Team Z Move</button>
+        <button class="mode-btn" data-mode="bosses">NPC Team</button>
+      </div>
+    </header>
+
+    <!-- Standard Teams -->
+    <div class="teams-content">
+      <div class="type-selector"></div>
+      <div class="team-selector"></div>
+      <div class="team-display"></div>
+    </div>
+
+    <!-- Boss Teams -->
+    <div class="bosses-content" style="display:none">
+      <div id="boss-container" class="boss-grid"></div>
+    </div>
+  </div>
+
+  <!-- Load scripts cuối cùng -->
+<!-- Load scripts cuối cùng -->
+<script src="script.js"></script>
+<script src="boss-data.js"></script>  <!-- Phải load trước -->
+<script src="boss.js"></script>
+<script src="lazy-load.js.txt"></script> <!-- Nếu cần -->
+
+</body>
+</html>

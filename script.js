@@ -89,14 +89,14 @@ const pokemonTeams = {
                 "moves": ["Flip Turn", "Toxic Spikes", "Knock Off", "Protect"]
             },
             {
-                "name": "Gengar-Mega",
-                "item": "Gengarite",
-                "ability": "Shadow Tag",
+                "name": "Gengar",
+                "item": "Focus Sash",
+                "ability": "Cursed Body",
                 "shiny": true,
                 "teraType": "Ghost",
                 "evs": "252 SpA / 4 SpD / 252 Spe",
                 "nature": "Timid",
-                "moves": ["Focus Blast", "Sludge Wave", "Shadow Ball", "Dazzling Gleam"]
+                "moves": ["Nasty Plot", "Sludge Wave", "Shadow Ball", "Dazzling Gleam"]
             }
         ],
         "Poison-2": [
@@ -1089,7 +1089,6 @@ function getPokemonImage(name) {
     const baseName = name.replace('-Mega', '').replace('-Therian', '').replace('-Sky', '').replace('-Black', '');
     return `https://img.pokemondb.net/sprites/home/normal/${baseName.toLowerCase()}.png`;
 }
-// Thêm vào đây (sau các biến const nhưng trước document.addEventListener)
 function getCorrectPokemonImage(name) {
     // Danh sách đầy đủ các form đặc biệt
     const specialForms = {

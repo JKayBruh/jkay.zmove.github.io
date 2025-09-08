@@ -64,9 +64,9 @@ const pokemonTeams = {
                 "nature": "Timid",
                 "moves": ["Mind Blown", "Shadow Ball", "Flamethrower", "Psychic"]
             }
-        ]
+        ],
     
-"Ghost-3": [
+        "Ghost-3": [
             {
                 "name": "Mimikyu",
                 "item": "Life Orb",
@@ -149,7 +149,7 @@ const pokemonTeams = {
                 "ability": "Swarm",
                 "shiny": true,
                 "teraType": "Bug",
-                "evs": "252 Atk / 252 Spe",
+                "evs": "252 Atk / 252 Spe / 4 Hp",
                 "nature": "Jolly",
                 "moves": ["Sticky Web", "X-Scissor", "Poison Jab", "Megahorn"]
             },
@@ -163,7 +163,7 @@ const pokemonTeams = {
                 "nature": "Timid",
                 "moves": ["Protect", "Shadow Ball", "Thunderbolt", "Destiny Bond"]
             }
-        ]
+        ],
     
 "Poison-3": [
             {
@@ -196,8 +196,8 @@ const pokemonTeams = {
                 "nature": "Timid",
                 "moves": ["Protect", "Shadow Ball", "Thunderbolt", "Destiny Bond"]
             }
-        ],
-
+        ]
+    },
     "Rock": {
         "Rock-1": [
             {
@@ -328,7 +328,7 @@ const pokemonTeams = {
                 "nature": "Naive",
                 "moves": ["Clanging Scales", "Drain Punch", "Flamethrower", "Flash Cannon"]
             }
-        ]
+        ],
         "Fighting-3": [
             {
                 "name": "Infernape",
@@ -351,7 +351,7 @@ const pokemonTeams = {
                 "moves": ["Swords Dance", "Bullet Seed", "Mach Punch", "Spore"]
             },
             {
-                "name": "Lopunny",
+                "name": "Lopunny-Mega",
                 "item": "Lopunnite",
                 "ability": "Scrappy",
                 "shiny": true,
@@ -360,13 +360,13 @@ const pokemonTeams = {
                 "nature": "Jolly / Adamant",
                 "moves": ["Fake Out", "U-Turn", "High Jump Kick", "Return / Frustration"]
             }
-        ],
-    },
+        ]
+    }, 
     "Fairy": {
         "Fairy-1": [
             {
                 "name": "Ribombee",
-                "item": "Focus Sash / Buginium Z",
+                "item": "Focus Sash",
                 "ability": "Shield Dust",
                 "shiny": true,
                 "teraType": "Bug",
@@ -386,7 +386,7 @@ const pokemonTeams = {
             },
             {
                 "name": "Togekiss",
-                "item": "Choice Specs / Choice Scarf",
+                "item": "Choice Specs",
                 "ability": "Serene Grace",
                 "shiny": true,
                 "teraType": "Fairy",
@@ -508,7 +508,7 @@ const pokemonTeams = {
             },
             {
                 "name": "Salamence",
-                "item": "Focus Sash / Flynium Z",
+                "item": "Focus Sash",
                 "ability": "Moxie",
                 "shiny": true,
                 "teraType": "Dragon",
@@ -546,7 +546,7 @@ const pokemonTeams = {
                 "teraType": "Dragon",
                 "evs": "252 SpA / 4 SpD / 252 Spe",
                 "nature": "Timid",
-                "moves": ["Ice Beam", "Draco Meteor", "Earth Power", "Freeze-Dry"]
+                "moves": ["Ice Beam", "Draco Meteor", "Earth Power", "Psychic"]
             },
             {
                 "name": "Kommo-o",
@@ -569,8 +569,8 @@ const pokemonTeams = {
                 "shiny": true,
                 "teraType": "Water",
                 "evs": "252 SpA / 4 SpD / 252 Spe",
-                "nature": "Timid / Naive",
-                "moves": ["Ice Beam", "Grass Knot", "Sludge Wave / Gunk Shot", "Dark Pulse"]
+                "nature": "Timid",
+                "moves": ["Ice Beam", "Grass Knot", "Sludge Wave", "Dark Pulse"]
             },
             {
                 "name": "Bisharp",
@@ -592,8 +592,8 @@ const pokemonTeams = {
                 "nature": "Jolly",
                 "moves": ["Low Kick", "Knock Off", "Ice Shard", "Icicle Crash"]
             }
-        ]
-         "Dark-2": [
+        ],
+        "Dark-2": [
             {
                 "name": "Absol",
                 "item": "Focus Sash",
@@ -678,7 +678,7 @@ const pokemonTeams = {
                 "ability": "Technician",
                 "shiny": true,
                 "teraType": "Bug",
-                "evs": "252 Spe / 252 Atk / 4 Hp",
+                "evs": "252 HP / 252 Atk",
                 "nature": "Adamant",
                 "moves": ["Protect", "Swords Dance", "Bullet Punch", "Bug Bite"]
             },
@@ -758,7 +758,7 @@ const pokemonTeams = {
                 "nature": "Timid",
                 "moves": ["Dragon Pulse", "Luster Purge", "Ice Beam", "Thunderbolt"]
             }
-        ]
+        ],
         "Psychic-3": [
             {
                 "name": "Latios",
@@ -1018,7 +1018,7 @@ const pokemonTeams = {
                 "ability": "Natural Cure",
                 "shiny": true,
                 "teraType": "Psychic",
-                "evs": "252 SpA / 252 Spe / 4 SpD",
+                "evs": "252 SpA / 252 Spe / 4 Hp",
                 "nature": "Timid",
                 "moves": ["Nasty Plot", "Energy Ball", "Shadow Ball", "Psychic"]
             }
@@ -1252,7 +1252,6 @@ function getPokemonImage(name) {
     return `https://img.pokemondb.net/sprites/home/normal/${baseName.toLowerCase()}.png`;
 }
 function getCorrectPokemonImage(name) {
-    // Danh sách đầy đủ các form đặc biệt
     const specialForms = {
         // Mega Evolution
         'Banette-Mega': 'banette-mega',
@@ -1267,6 +1266,10 @@ function getCorrectPokemonImage(name) {
         'Kangaskhan-Mega': 'kangaskhan-mega',
         'Latios-Mega': 'latios-mega',
         'Swampert-Mega': 'swampert-mega',
+        'Gardevoir-Mega': 'gardevoir-mega',
+        'Sharpedo-Mega': 'sharpedo-mega',
+        'Metagross-Mega': 'metagross-mega',
+        'Lopunny-Mega': 'lopunny-mega',
         
         // Therian Forme
         'Thundurus-Therian': 'thundurus-therian',
@@ -1295,6 +1298,7 @@ function getFallbackImage(name) {
     }
     return 'https://via.placeholder.com/120x120?text=Pokemon';
 }
+
 // Initialize the app
 document.addEventListener('DOMContentLoaded', function() {
     const typeSelector = document.querySelector('.type-selector');
@@ -1396,6 +1400,10 @@ img.onerror = function() {
                 moveEl.textContent = move;
                 movesContainer.appendChild(moveEl);
             });
+            pokemon.moves.map(move => `
+  <div class="move" data-move="${move}">${move}</div>
+`).join("")
+
             
             card.appendChild(img);
             card.appendChild(name);
@@ -1435,4 +1443,3 @@ document.querySelectorAll('.mode-btn').forEach(btn => {
     }
   });
 });
-

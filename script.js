@@ -417,7 +417,7 @@ const pokemonTeams = {
                 "moves": ["Swords Dance", "Shadow Sneak", "Play Rough", "Drain Punch"]
             },
             {
-                "name": "Gardevoir",
+                "name": "Gardevoir-Mega",
                 "item": "Gardevoirite",
                 "ability": "Pixilate",
                 "shiny": true,
@@ -1435,3 +1435,4 @@ document.querySelectorAll('.mode-btn').forEach(btn => {
     }
   });
 });
+

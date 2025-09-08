@@ -28,7 +28,7 @@ const pokemonTeams = {
                 "ability": "Prankster",
                 "shiny": true,
                 "teraType": "Ghost",
-                "evs": "252 HP / 252 Atk",
+                "evs": "252 HP / 252 Atk / 4 Spe",
                 "nature": "Adamant",
                 "moves": ["Protect", "Disable", "Destiny Bond", "Phantom Force"]
             }
@@ -65,6 +65,39 @@ const pokemonTeams = {
                 "moves": ["Mind Blown", "Shadow Ball", "Flamethrower", "Psychic"]
             }
         ]
+    
+"Ghost-3": [
+            {
+                "name": "Mimikyu",
+                "item": "Life Orb",
+                "ability": "Disguise",
+                "shiny": true,
+                "teraType": "Ghost",
+                "evs": "252 Atk / 4 SpD / 252 Spe",
+                "nature": "Jolly",
+                "moves": ["Swords Dance", "Drain Punch", "Play Rough", "Shadow Sneak"]
+            },
+            {
+                "name": "Gengar",
+                "item": "Focus Sash",
+                "ability": "Curses Body",
+                "shiny": true,
+                "teraType": "Psychic",
+                "evs": "252 HP / 252 SpA / 4 SpD",
+                "nature": "Timid",
+                "moves": ["Protect", "Shadow Ball", "Thunderbolt", "Destiny Bond"]
+            },
+            {
+                "name": "Aegislash",
+                "item": "Leftover",
+                "ability": "Stance Change",
+                "shiny": true,
+                "teraType": "Fire",
+                "evs": "252 Atk / 4 Hp / 252 Spe",
+                "nature": "Adamant",
+                "moves": ["Sword Dance", "Shadow Sneak", "King's Shield", "Sacred Sword"]
+            }
+        ]
     },
     "Poison": {
         "Poison-1": [
@@ -76,7 +109,7 @@ const pokemonTeams = {
                 "teraType": "Bug",
                 "evs": "252 Atk / 4 SpD / 252 Spe",
                 "nature": "Jolly",
-                "moves": ["U-turn", "Poison Jab", "Knock Off", "X-Scissor"]
+                "moves": ["U-turn", "Poison Jab", "Knock Off", "Fell Stinger"]
             },
             {
                 "name": "Tentacruel",
@@ -90,13 +123,13 @@ const pokemonTeams = {
             },
             {
                 "name": "Gengar",
-                "item": "Focus Sash",
+                "item": "Focus Sash / Ghostium Z",
                 "ability": "Cursed Body",
                 "shiny": true,
                 "teraType": "Ghost",
                 "evs": "252 SpA / 4 SpD / 252 Spe",
                 "nature": "Timid",
-                "moves": ["Nasty Plot", "Sludge Wave", "Shadow Ball", "Dazzling Gleam"]
+                "moves": ["Protect", "Shadow Ball", "Thunderbolt", "Destiny Bond"]
             }
         ],
         "Poison-2": [
@@ -122,16 +155,49 @@ const pokemonTeams = {
             },
             {
                 "name": "Gengar",
-                "item": "Focus Sash",
+                "item": "Focus Sash/ Ghostium Z",
                 "ability": "Cursed Body",
                 "shiny": true,
                 "teraType": "Ghost",
                 "evs": "252 SpA / 4 SpD / 252 Spe",
                 "nature": "Timid",
-                "moves": ["Nasty Plot", "Sludge Wave", "Shadow Ball", "Focus Blast"]
+                "moves": ["Protect", "Shadow Ball", "Thunderbolt", "Destiny Bond"]
             }
         ]
-    },
+    
+"Poison-3": [
+            {
+                "name": "Beedrill-Mega",
+                "item": "Beedrillite",
+                "ability": "Adaptability",
+                "shiny": true,
+                "teraType": "Bug",
+                "evs": "252 Atk / 4 SpD / 252 Spe",
+                "nature": "Jolly",
+                "moves": ["U-turn", "Poison Jab", "Knock Off", "Fell Stinger"]
+            },
+            {
+                "name": "Toxicroak",
+                "item": "Focus Sash",
+                "ability": "Dry Skin",
+                "shiny": true,
+                "teraType": "Water",
+                "evs": "252 Atk / 252 Spe / 4 SpD",
+                "nature": "Jolly / Adamant",
+                "moves": ["Sucker Punch", "Sword Dance", "Poison Jab", "Drain Punch"]
+            },
+            {
+                "name": "Gengar",
+                "item": "Focus Sash / Ghostium Z",
+                "ability": "Cursed Body",
+                "shiny": true,
+                "teraType": "Ghost",
+                "evs": "252 SpA / 4 SpD / 252 Spe",
+                "nature": "Timid",
+                "moves": ["Protect", "Shadow Ball", "Thunderbolt", "Destiny Bond"]
+            }
+        ],
+
     "Rock": {
         "Rock-1": [
             {
@@ -218,7 +284,7 @@ const pokemonTeams = {
                 "teraType": "Grass",
                 "evs": "252 Atk / 4 SpD / 252 Spe",
                 "nature": "Jolly",
-                "moves": ["Swords Dance", "Bullet Seed", "Mach Punch", "Gunk Shot"]
+                "moves": ["Swords Dance", "Bullet Seed", "Mach Punch", "Spore"]
             },
             {
                 "name": "Hawlucha",
@@ -263,12 +329,44 @@ const pokemonTeams = {
                 "moves": ["Clanging Scales", "Drain Punch", "Flamethrower", "Flash Cannon"]
             }
         ]
+        "Fighting-3": [
+            {
+                "name": "Infernape",
+                "item": "Focus Sash",
+                "ability": "Blaze",
+                "shiny": true,
+                "teraType": "Fire",
+                "evs": "4 Atk / 252 SpA / 252 Spe",
+                "nature": "Naive / Timid",
+                "moves": ["Nasty Plot", "Wacuume Wave", "Flamethrower", "Focus Blast / Aura Sphere"]
+            },
+            {
+                "name": "Breloom",
+                "item": "Focus Sash",
+                "ability": "Technician",
+                "shiny": true,
+                "teraType": "Grass",
+                "evs": "252 Atk / 4 SpD / 252 Spe",
+                "nature": "Jolly",
+                "moves": ["Swords Dance", "Bullet Seed", "Mach Punch", "Spore"]
+            },
+            {
+                "name": "Lopunny",
+                "item": "Lopunnite",
+                "ability": "Scrappy",
+                "shiny": true,
+                "teraType": "Fighting",
+                "evs": "252 Atk / 4 SpD / 252 Spe",
+                "nature": "Jolly / Adamant",
+                "moves": ["Fake Out", "U-Turn", "High Jump Kick", "Return / Frustration"]
+            }
+        ],
     },
     "Fairy": {
         "Fairy-1": [
             {
                 "name": "Ribombee",
-                "item": "Focus Sash",
+                "item": "Focus Sash / Buginium Z",
                 "ability": "Shield Dust",
                 "shiny": true,
                 "teraType": "Bug",
@@ -288,7 +386,7 @@ const pokemonTeams = {
             },
             {
                 "name": "Togekiss",
-                "item": "Choice Specs",
+                "item": "Choice Specs / Choice Scarf",
                 "ability": "Serene Grace",
                 "shiny": true,
                 "teraType": "Fairy",
@@ -319,14 +417,14 @@ const pokemonTeams = {
                 "moves": ["Swords Dance", "Shadow Sneak", "Play Rough", "Drain Punch"]
             },
             {
-                "name": "Zacian",
-                "item": "Focus Sash",
-                "ability": "Intrepid Sword",
+                "name": "Gardevoir",
+                "item": "Gardevoirite",
+                "ability": "Pixilate",
                 "shiny": true,
                 "teraType": "Fairy",
-                "evs": "252 Atk / 4 SpD / 252 Spe",
-                "nature": "Jolly",
-                "moves": ["Swords Dance", "Play Rough", "Close Combat", "Psychic Fangs"]
+                "evs": "252 SpA / 4 SpD / 252 Spe",
+                "nature": "Timid",
+                "moves": ["Calm Mind", "Hyper Voice", "Psychic", "Mystical Fire"]
             }
         ]
     },
@@ -410,7 +508,7 @@ const pokemonTeams = {
             },
             {
                 "name": "Salamence",
-                "item": "Focus Sash",
+                "item": "Focus Sash / Flynium Z",
                 "ability": "Moxie",
                 "shiny": true,
                 "teraType": "Dragon",
@@ -448,7 +546,7 @@ const pokemonTeams = {
                 "teraType": "Dragon",
                 "evs": "252 SpA / 4 SpD / 252 Spe",
                 "nature": "Timid",
-                "moves": ["Ice Beam", "Draco Meteor", "Earth Power", "Psychic"]
+                "moves": ["Ice Beam", "Draco Meteor", "Earth Power", "Freeze-Dry"]
             },
             {
                 "name": "Kommo-o",
@@ -463,7 +561,7 @@ const pokemonTeams = {
         ]
     },
     "Dark": {
-        "Dark": [
+        "Dark-1": [
             {
                 "name": "Greninja",
                 "item": "Choice Specs",
@@ -471,8 +569,8 @@ const pokemonTeams = {
                 "shiny": true,
                 "teraType": "Water",
                 "evs": "252 SpA / 4 SpD / 252 Spe",
-                "nature": "Timid",
-                "moves": ["Ice Beam", "Grass Knot", "Sludge Wave", "Dark Pulse"]
+                "nature": "Timid / Naive",
+                "moves": ["Ice Beam", "Grass Knot", "Sludge Wave / Gunk Shot", "Dark Pulse"]
             },
             {
                 "name": "Bisharp",
@@ -493,6 +591,38 @@ const pokemonTeams = {
                 "evs": "252 Atk / 4 SpD / 252 Spe",
                 "nature": "Jolly",
                 "moves": ["Low Kick", "Knock Off", "Ice Shard", "Icicle Crash"]
+            }
+        ]
+         "Dark-2": [
+            {
+                "name": "Absol",
+                "item": "Focus Sash",
+                "ability": "Super Luck",
+                "shiny": true,
+                "teraType": "Dark",
+                "evs": "252 Atk / 4 SpD / 252 Spe",
+                "nature": "Jolly",
+                "moves": ["Sword Dance", "Sucker Punch", "Knock Off / Baton Pass", "Stone Edge / Play Rough"]
+            },
+            {
+                "name": "Sharpedo-Mega",
+                "item": "Sharpedonite",
+                "ability": "Speed Boost -> Strong Jaw",
+                "shiny": true,
+                "teraType": "Dark",
+                "evs": "252 Atk / 4 SpD / 252 Spe",
+                "nature": "Adamant",
+                "moves": ["Ice Fang", "Waterfall", "Crunch", "Protect"]
+            },
+            {
+                "name": "Greninja",
+                "item": "Choice Specs",
+                "ability": "Protean",
+                "shiny": true,
+                "teraType": "Water",
+                "evs": "252 SpA / 4 SpD / 252 Spe",
+                "nature": "Timid / Naive",
+                "moves": ["Ice Beam", "Grass Knot", "Sludge Wave / Gunk Shot", "Dark Pulse"]
             }
         ]
     },
@@ -548,7 +678,7 @@ const pokemonTeams = {
                 "ability": "Technician",
                 "shiny": true,
                 "teraType": "Bug",
-                "evs": "252 HP / 252 Atk",
+                "evs": "252 Spe / 252 Atk / 4 Hp",
                 "nature": "Adamant",
                 "moves": ["Protect", "Swords Dance", "Bullet Punch", "Bug Bite"]
             },
@@ -629,6 +759,38 @@ const pokemonTeams = {
                 "moves": ["Dragon Pulse", "Luster Purge", "Ice Beam", "Thunderbolt"]
             }
         ]
+        "Psychic-3": [
+            {
+                "name": "Latios",
+                "item": "Focus Sash / Choie Scarf(1vs3 Dragon)",
+                "ability": "Levitate",
+                "shiny": true,
+                "teraType": "Dragon",
+                "evs": "252 SpA / 4 SpD / 252 Spe",
+                "nature": "Timid",
+                "moves": ["Dragon Pulse", "Luster Purge", "Ice Beam", "Thunderbolt"]
+            },
+            {
+                "name": "Alakazam",
+                "item": "Focus Sash",
+                "ability": "Magic Guard",
+                "shiny": true,
+                "teraType": "Psychic",
+                "evs": "252 SpA / 4 SpD / 252 Spe",
+                "nature": "Timid",
+                "moves": ["Psychic", "Shadowball", "Calm Mind", "Focus Blast"]
+            },
+            {
+                "name": "Metagross-Mega",
+                "item": "Metagrossite",
+                "ability": "Tough Claw",
+                "shiny": true,
+                "teraType": "Psychic",
+                "evs": "252 Atk / 4 SpD / 252 Spe",
+                "nature": "Jolly",
+                "moves": ["Power-Up Punch", "Zen Headbutt", "Bullet Punch / Thunder Punch", "Meteor Mash"]
+            }
+        ]
     },
     "Electric": {
         "Electric": [
@@ -672,13 +834,13 @@ const pokemonTeams = {
                 "ability": "Drought",
                 "shiny": true,
                 "teraType": "Fire",
-                "evs": "252 SpA / 252 Spe",
+                "evs": "252 SpA / 252 Spe / 4 Hp",
                 "nature": "Timid",
                 "moves": ["Solar Beam", "Scorching Sands", "Flamethrower", "Roost"]
             },
             {
                 "name": "Darmanitan",
-                "item": "Focus Sash",
+                "item": "Focus Sash / Choice Scarf",
                 "ability": "Sheer Force",
                 "shiny": true,
                 "teraType": "Fire",
@@ -824,7 +986,7 @@ const pokemonTeams = {
                 "ability": "Swarm",
                 "shiny": true,
                 "teraType": "Bug",
-                "evs": "252 Atk / 252 Spe",
+                "evs": "252 Atk / 252 Spe / 4 Hp",
                 "nature": "Jolly",
                 "moves": ["Sticky Web", "Swords Dance", "Leaf Blade", "X-Scissor"]
             }
@@ -856,7 +1018,7 @@ const pokemonTeams = {
                 "ability": "Natural Cure",
                 "shiny": true,
                 "teraType": "Psychic",
-                "evs": "252 SpA / 252 Spe",
+                "evs": "252 SpA / 252 Spe / 4 SpD",
                 "nature": "Timid",
                 "moves": ["Nasty Plot", "Energy Ball", "Shadow Ball", "Psychic"]
             }
@@ -868,7 +1030,7 @@ const pokemonTeams = {
                 "ability": "Thick Fat",
                 "shiny": true,
                 "teraType": "Grass",
-                "evs": "252 SpA / 252 Spe",
+                "evs": "252 SpA / 252 Spe / 4 Hp",
                 "nature": "Modest",
                 "moves": ["Energy Ball", "Sludge Bomb", "Earth Power", "Giga Drain"]
             },
@@ -968,7 +1130,7 @@ const pokemonTeams = {
                 "ability": "Own Tempo",
                 "shiny": true,
                 "teraType": "Normal",
-                "evs": "252 HP / 252 Spe",
+                "evs": "252 HP / 252 Spe / 4 Def",
                 "nature": "Jolly",
                 "moves": ["Spore", "Light Screen", "Stealth Rock", "Reflect"]
             },
